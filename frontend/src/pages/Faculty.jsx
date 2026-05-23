@@ -21,7 +21,7 @@ function Faculty() {
   const getFaculty = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/faculty"
+        "https://fms-backend-0fle.onrender.com/api/faculty"
       );
 
       const data = await response.json();
@@ -43,7 +43,7 @@ function Faculty() {
       if (editId) {
         // UPDATE
         await fetch(
-          `http://localhost:5000/api/faculty/${editId}`,
+          `https://fms-backend-0fle.onrender.com/api/faculty/${editId}`,
           {
             method: "PUT",
             headers: {
@@ -57,7 +57,7 @@ function Faculty() {
       } else {
         // ADD
         await fetch(
-          "http://localhost:5000/api/faculty",
+          "https://fms-backend-0fle.onrender.com/api/faculty",
           {
             method: "POST",
             headers: {
@@ -84,7 +84,7 @@ function Faculty() {
   const deleteFaculty = async (id) => {
     try {
       await fetch(
-        `http://localhost:5000/api/faculty/${id}`,
+        `https://fms-backend-0fle.onrender.com/api/faculty/${id}`,
         {
           method: "DELETE",
         }
